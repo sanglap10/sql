@@ -24,6 +24,32 @@ JOIN product P ON P.productId = S.productId
 WHERE P.name = 'soap'
 
 
+SELECT 
+    AVG(s.quantitySold)
+FROM sales S 
+JOIN product P ON P.productId = S.productId
+WHERE P.name = 'soap'
+
+-- JOINS
+
+-- Show only common records
+SELECT 
+P.Name,
+S.QuantitySold,
+S.SaleDate,
+S.ProductId
+FROM Sales S
+JOIN Product P ON P.ProductId = S.ProductId 
+
+-- show all records from Product and show mull for sales
+SELECT 
+P.Name,
+S.QuantitySold,
+S.SaleDate,
+S.ProductId
+FROM Sales S
+RIGHT JOIN Product P ON P.ProductId = S.ProductId 
+
 
 
 
